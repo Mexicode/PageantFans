@@ -1,0 +1,21 @@
+/* --------------------------Start of Fans styles-------------------------- */
+
+
+/* --------------------------Media elements-------------------------- */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+
+}
+
+/* --------------------------Animations-------------------------- */
+
+/* TODO */
+
+
