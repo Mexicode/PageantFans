@@ -9,6 +9,10 @@ video {
     transition: opacity .5s ease; 
 }
 
+body {
+    background-color: #f6f6f6;
+  }
+
 .download-app__card {
     background-color: white;
     border-radius: 10px;

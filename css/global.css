@@ -10,7 +10,7 @@ body {
   display: -webkit-flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f6f6f6;
+  background-color: black;
   word-spacing: normal;
 }
 
