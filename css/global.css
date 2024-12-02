@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+} 
 
 body {
   display: flex;
@@ -19,6 +19,10 @@ h2 {
   font-size: 2.6em;
   text-align: left;
   margin-bottom: 30px;
+}
+
+.headerFooter {
+  background-color: #000000;
 }
 
 .headerFooter video {
@@ -183,6 +187,7 @@ h2 {
   width: 45%;
 }
 
+
 /* -------------------Media elements------------------- */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 700px) {
@@ -294,10 +299,7 @@ h2 {
     margin: 30px 15px;
   }
 
-  h2 {
-    font-size: 1.6em;
 
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -320,8 +322,12 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
   .cardsData {
-    padding: 70px;
+    padding: 30px;
   }
+  .h2-text-queen{
+    margin-right: 10px;;
+  }
+  
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -400,21 +406,16 @@ h2 {
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .cardCarrucel h1 {
-    font-size: 2rem;
-  }
-}
-
 @media only screen and (min-width: 1600px) {
   .separador {
     top: 680px;
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1200px) {
+@media only screen and (min-width: 601px) and (max-width: 700px) {
   .cardsData img {
-    width: 70%;
+    width: 80%;
+    padding: 60px 5%;
   }
 
   .textcardsFans p {
@@ -429,8 +430,76 @@ h2 {
     font-size: 1.5rem;
     margin: 8%;
   }
+  .textcardsQueens {
+    padding: 0px 0;
+}
+}
+@media only screen and (min-width: 701px) and (max-width: 1200px) {
+  .cardsData img {
+    width: 45%;
+    padding: 60px 5%;
+  }
+
+  .textcardsFans p {
+    font-size: 1rem;
+    margin: 10%;
+    color: white;
+    text-align: justify;
+  }
+
+  .textcardsFans h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 8%;
+  }
+  .cardCarrucel p {
+    font-size: 1rem;
+  }
 }
 
+@media only screen and (min-width: 701px)  and (max-width: 800px) {
+  h2{
+    font-size: 1.6rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 801px)  and (max-width: 900px) {
+  h2{
+    font-size: 2rem;
+  }
+  h3{
+    font-size: 1.4rem;
+  } 
+}
+
+@media only screen and (min-width: 901px)  and (max-width: 1100px) {
+  h2{
+    font-size: 2.2rem;
+  }
+  h3{
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1000px)  and (max-width: 1100px) {
+    h1{
+      font-size: 2.2rem;;
+    }
+    
+}
+@media only screen and (min-width: 1101px)  {
+  h2{
+    font-size: 2.6rem;
+  }
+  h3{
+    font-size: 1.8rem;
+  }
+  h1{
+    font-size: 2.6rem;
+  }
+}
 
 /* -------------------Animations------------------- */
 
