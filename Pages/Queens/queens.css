@@ -203,7 +203,7 @@
     }
 
     .texto-h {
-        padding: 12% 7% 7%;
+        padding: 12% 7% 100px;
     }
 }
 
@@ -305,7 +305,7 @@
     .video-queens {
         width: 75%;
         position: absolute;
-        top: 50.5%;
+        top: 40%;
         left: 48.5%;
     }
 }
@@ -328,10 +328,14 @@
 /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 @media (min-width:320px) {
     .img-queen {
-        width: 140px !important;
+        width: 160px !important;
         height: auto !important;
         object-fit: contain;
-        clip-path: inset(6px 7px 11px 8px round 20px);
+        clip-path: inset(6px 7px 11px 8px round 27px);
+    }
+    .video-queens {
+        top: 40%;
+        left: 45%;
     }
 }
 
@@ -343,55 +347,68 @@
         object-fit: contain;
         clip-path: inset(9px 10px 13px 9px round 30px);
     }
+    .video-queens {
+        top: 40%;
+        left: 45%;
+    }
 }
 
 /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 @media (min-width:600px) {
     .img-queen {
-        width: 235px !important;
+        width: 250px !important;
         height: auto !important;
         object-fit: contain;
-        clip-path: inset(10px 12px 16px 10px round 35px);
+        clip-path: inset(10px 14px 14px 10px round 45px);
+    }
+
+    .video-queens {
+        top: 40%;
+        left: 45%;
     }
 }
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:801px) {
     .img-queen {
-        width: 300px !important;
+        width: 170px !important;
         height: auto !important;
         object-fit: contain;
-        clip-path: inset(12px 14px 18px 12px round 47px);
+        clip-path: inset(7px 8px 8px 8px round 24px);
     }
 }
 
 /* big landscape tablets, laptops, and desktops */
 @media (min-width:1025px) {
     .img-queen {
-        width: 350px !important;
+        width: 200px !important;
         height: auto !important;
         object-fit: contain;
-        clip-path: inset(15px 17px 20px 18px round 58px);
+        clip-path: inset(7px 10px 10px 8px round 31px);
     }
 }
 
 /* hi-res laptops and desktops */
 @media (min-width:1281px) {
     .img-queen {
-        width: 320px !important;
+        width: 230px !important;
         height: auto !important;
         object-fit: contain;
-        clip-path: inset(15px 17px 19px 18px round 58px);
+        clip-path: inset(10px 11px 12px 10px round 34px);
     }
 }
 
 /* Large desktops (1920px and above) */
 @media (min-width: 1920px) {
     .img-queen {
-        width: 350px !important;
+        width: 300px !important;
         height: auto !important;
         object-fit: contain;
         clip-path: inset(16px 19px 22px 18px round 60px);
+    }
+    .video-queens {
+        top: 50%;
+        left: 45%;
     }
 }
 
