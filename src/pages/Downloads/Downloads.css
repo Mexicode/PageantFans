@@ -1,0 +1,239 @@
+.download {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.download__video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.download__header {
+    padding-top: 5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.download__header--title {
+    margin-top: 65px;
+    font-size: 48px;
+    font-family: "Abhaya Libre", serif;
+    margin-bottom: 24px;
+}
+
+.download__section {
+    display: flex;
+    justify-content: center;
+}
+
+.download__content {
+    width: 75%;
+    padding: 30px 0px;
+    border-radius: 20px;
+    background-color: #ffffff59;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: minmax(35px, auto);
+}
+
+.download__phone {
+    width: auto;
+}
+
+.download__phone--img {
+    width: 75%;
+    text-align: center;
+}
+
+.download__content__text {
+    width: 75%;
+    margin: 30px 0px;
+    overflow: hidden;
+}
+
+
+.download__QR--img {
+    width: 40%
+}
+
+.download__content__QR--text {
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 24px 0px;
+}
+
+.download__button {
+    margin-top: 2%;
+}
+
+.download__button--button {
+    border: none;
+    background-color: #e30426;
+    color: rgb(255, 255, 255);
+    padding: 10px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download__button--button:hover {
+    background-color: #ffffff;
+    color: #e30426;
+    backdrop-filter: blur(5px);
+    animation: download__button-hover 0.9s linear both;
+}
+
+
+/* --------------------------Responsive.-------------------------- */
+
+/* Smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width:320px) {
+    .download__header--title {
+        font-size: 48px;
+    }
+
+    .download__content__QR--text {
+        font-size: 16px;
+    }
+
+    .download__content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .download__QR {
+        display: none;
+    }
+}
+
+/* Smartphones, Android phones, landscape iPhone */
+@media (min-width:480px) {
+    .download__header--title {
+        font-size: 60px;
+    }
+
+    .download__content__QR--text {
+        font-size: 17px;
+    }
+
+    .download__QR {
+        display: none;
+    }
+}
+
+/* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px) {
+    .download__header--title {
+        font-size: 72px;
+    }
+
+    .download__content__QR--text {
+        font-size: 18px;
+    }
+
+}
+
+/* Tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px) {
+    .download__header--title {
+        font-size: 84px;
+    }
+
+    .download__content__QR--text {
+        font-size: 19px;
+    }
+
+
+
+    .download__content {
+        margin: 0px 20%;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .download__phone--img {
+        width: 90%;
+    }
+}
+
+/* Big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+    .download__header--title {
+        font-size: 96px;
+    }
+
+    .download__content__QR--text {
+        font-size: 20px;
+    }
+
+    .download__QR {
+        display: block;
+    }
+
+    .download__QR--img {
+        width: 60%;
+    }
+}
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+    .download__header--title {
+        font-size: 108px;
+    }
+
+    .download__content__QR--text {
+        font-size: 21px;
+    }
+
+    .download__QR--img {
+        width: 40%;
+    }
+}
+
+/* Large desktops (1920px and above) */
+@media (min-width: 1920px) {
+    .download__header--title {
+        font-size: 120px;
+    }
+
+    .download__content__QR--text {
+        font-size: 22px;
+    }
+}
+
+/* Ultra-wide desktops (2560px and above) */
+@media (min-width: 2560px) {
+    .download__header--title {
+        font-size: 144px;
+    }
+
+    .download__content__QR--text {
+        font-size: 23px;
+    }
+}
+
+/* 4K screens (3840px and above) */
+@media (min-width: 3840px) {
+    .download__header--title {
+        font-size: 180px;
+    }
+
+    .download__content__QR--text {
+        font-size: 24px;
+    }
+}

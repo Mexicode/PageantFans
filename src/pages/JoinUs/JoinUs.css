@@ -1,0 +1,506 @@
+.joinus {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.joinus__header-arrow {
+    background: none;  
+    border: none;      
+    padding: 0;       
+    font-size: 24px;   
+    color: white;      
+}
+
+.joinus__header-link {
+    background: none;  
+    border: none;      
+    cursor: pointer;   
+}
+
+.joinus__title {
+    font-weight: lighter;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #000000;
+}
+
+.joinus__header {
+    width: 100%;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.joinus__form-select, .joinus__form-input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.joinus__form-fields {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    border-radius: 24px;
+    padding: 30px;
+}
+
+.joinus__form-description {
+    padding: 3% 0 5% 0;
+}
+
+.joinus__form-label {
+    margin-top: 2%;
+}
+
+.joinus__form-required {
+    color: #E30426;
+    font-size: 20px;
+}
+
+.joinus__form-image {
+    height: auto; 
+}
+
+.joinus__form-button {
+    border: none;
+    background-color: #e30426;
+    color: #ffffff;
+    padding: 10px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 30px;
+}
+
+.joinus__form-button:hover {
+    border: 2px solid #e30426;
+    background-color: #ffffff;
+    color: #e30426;
+    backdrop-filter: blur(5px);
+    animation: news__button-hover 0.9s linear both;
+}
+.joinus__form-input--error {
+    border: 1px solid red;
+}
+
+.joinus__form-required-text {
+    color: #E30426;
+    padding:0;
+}
+
+.joinus__form-content--hover {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    justify-content: center; 
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.joinus__form{
+    padding: 1px;
+}
+
+.joinus__form-select, .joinus__form-input {
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 25px;
+}
+
+/* MENSAJE ERROR */
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 9999;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.message.success {
+    background-color: white;
+    color: #059033;
+    border: 2px solid #059033;
+}
+
+.message.error {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+
+.message p {
+    margin-left: 10px;
+}
+
+.message svg {
+    font-size: 24px;
+}
+
+.joinus__form-content {
+    position: relative;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (min-width: 300px) and (max-width: 479px) {
+    .joinus__title {
+        font-size: 48px;
+    }
+    .joinus__form-image {
+        display: none;
+    }
+    .joinus__form-title {
+        font-size: 18px;
+    }
+    .joinus__form-description {
+        font-size: 16px;
+    }
+    .joinus__form-label {
+        font-size: 14px;
+    }
+    .joinus__form-required-text {
+        font-size: 16px;
+    }  
+    .joinus__form-button {
+        width: 70px;
+        font-size: 16px;
+    }    
+}
+
+@media only screen and (min-width: 480px) and (max-width: 599px){
+    .joinus__title {
+        font-size: 60px;
+    }
+    .joinus__form-image {
+        display: none;
+    }
+    .joinus__form-title {
+        font-size: 20px;
+    }
+    .joinus__form-description {
+        font-size: 17px;
+    }
+    .joinus__form-label {
+        font-size: 15px;
+    }
+    .joinus__form-required-text {
+        font-size: 17px;
+    }  
+    .joinus__form-button {
+        width: 70px;
+        font-size: 16px;
+    } 
+    .joinus__header-arrow {      
+        font-size: 25px;         
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 799px){
+    .joinus__title {
+        font-size: 72px;
+    }
+    .joinus__form-image {
+        display: none;
+    }
+    .joinus__form-title {
+        font-size: 24px;
+    }
+    .joinus__form-description {
+        font-size: 18px;
+    }
+    .joinus__form-label {
+        font-size: 16px;
+    }
+    .joinus__form-required-text {
+        font-size: 18px;
+    }  
+    .joinus__form-button {
+        width: 80px;
+        font-size: 16px;
+    }
+    .joinus__header-arrow {      
+        font-size: 30px;         
+    } 
+}
+
+@media only screen and (min-width: 800px){
+    .joinus__title {
+        font-size: 84px;
+    }
+    .joinus__form-image {
+        width: 50%; 
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
+    }
+    .joinus__form-title {
+        font-size: 28px;
+    }
+    .joinus__form-description {
+        font-size: 19px;
+    }
+    .joinus__form-label {
+        font-size: 17px;
+    }
+    .joinus__form-required-text {
+        font-size: 19px;
+    }  
+    .joinus__form-button {
+        width: 90px;
+        font-size: 16px;
+    } 
+    .joinus__header-arrow {      
+        font-size: 35px;         
+    }
+}
+
+@media only screen and (min-width: 951px) {
+    .joinus__form-fields {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .joinus__title {
+        font-size: 96px;
+    }
+    .joinus__form-image {
+        width: 100%; 
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .joinus__form-title {
+        font-size: 30px;
+    }
+    .joinus__form-description {
+        font-size: 20px;
+    }
+    .joinus__form-label {
+        font-size: 18px;
+    }
+    .joinus__form-required-text {
+        font-size: 20px;
+    }  
+    .joinus__form-button {
+        width: 100px;
+        font-size: 16px;
+    } 
+    .joinus__header-arrow {      
+        font-size: 40px;         
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .joinus__form-fields {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .joinus__title {
+        font-size: 108px;
+    }
+    .joinus__form-image {
+        width: 100%; 
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .joinus__form-title {
+        font-size: 31px;
+    }
+    .joinus__form-description {
+        font-size: 21px;
+    }
+    .joinus__form-label {
+        font-size: 19px;
+    }
+    .joinus__form-required-text {
+        font-size: 21px;
+    }  
+    .joinus__form-button {
+        width: 100px;
+        font-size: 16px;
+    } 
+    .joinus__header-arrow {      
+        font-size: 55px;         
+    }
+
+}
+
+@media only screen and (min-width: 1300px) {
+    .joinus__form-fields {
+        width: 80%;
+    }
+    .joinus__form-image {
+        width: 1100px;
+        margin-top: auto;
+        margin-bottom: 40px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    .joinus__form-fields {
+        width: 35%;
+        margin-right: 5%;
+    } 
+    .joinus__form-image {
+        width: 630px;
+        margin-top: -30px;
+        margin-bottom: 40px;
+        margin-right: auto;
+        margin-left: auto;
+    }  
+}
+
+@media only screen and (min-width: 1550px) { 
+    .joinus__form-image {
+        width: 630px;
+        margin-top: -60px;
+        margin-bottom: 40px;
+        margin-right: auto;
+        margin-left: auto;
+    } 
+}
+
+@media only screen and (min-width: 1850px) {
+    .joinus__form-fields {
+        width: 25%;
+        margin-right: 8%;
+    }  
+    .joinus__form-image {
+        width: 630px;
+        margin-top: -30px;
+        margin-bottom: 40px;
+        margin-right: auto;
+        margin-left: auto;
+    }  
+    .joinus__form-content--hover {
+        width: 100%;
+    } 
+}
+
+@media only screen and (min-width: 1920px) {
+    .joinus__title {
+        font-size: 120px;
+    }
+    .joinus__form-image {
+        margin-bottom: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .joinus__form-fields {
+        width: 35%;
+    }
+    .joinus__form-title {
+        font-size: 37px;
+    }
+    .joinus__form-description {
+        font-size: 22px;
+    }
+    .joinus__form-label {
+        font-size: 20px;
+    }
+    .joinus__form-required-text {
+        font-size: 22px;
+    }  
+    .joinus__form-button {
+        width: 100px;
+        font-size: 16px;
+    } 
+    .joinus__header-arrow {      
+        font-size: 60px;         
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .joinus__title {
+        font-size: 144px;
+    }
+    .joinus__form-image {
+        width: 930px;
+        margin-top: -100px;
+        margin-bottom: 40px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .joinus__form-fields {
+        width: 700px;
+        height: 610px;
+        padding: 50px;
+    }
+    .joinus__form-title {
+        font-size: 40px;
+    }
+    .joinus__form-description {
+        font-size: 23px;
+    }
+    .joinus__form-label {
+        font-size: 21px;
+    }
+    .joinus__form-required-text {
+        padding: 23px 0;
+        font-size: 23px;
+    }  
+    .joinus__form-button {
+        width: 100px;
+        font-size: 16px;
+    } 
+}
+
+@media only screen and (min-width: 3840px) {
+    .joinus__title {
+        font-size: 180px;
+    }
+    .joinus__form-image {
+        width: 930px;
+        margin-top: -100px;
+        margin-bottom: 40px;
+        margin-left: 20%;
+    }
+    .joinus__form-title {
+        font-size: 48px;
+    }
+    .joinus__form-description {
+        font-size: 24px;
+    }
+    .joinus__form-label {
+        font-size: 22px;
+    }
+    .joinus__form-required-text {
+        font-size: 24px;
+    }  
+    .joinus__form-button {
+        width: 100px;
+        font-size: 16px;
+
+    } 
+    .joinus__form-fields {
+        border-radius: 24px;
+        padding: 30px;
+        margin-left: auto;
+        margin-right: 8%;
+        width: 30%;
+        height: 610px;
+        padding: 50px;
+    }
+}
