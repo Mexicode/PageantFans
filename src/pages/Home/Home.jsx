@@ -1,115 +1,204 @@
-import './Home.css';
-import ReactPlayer from 'react-player';
-import React, { useEffect } from 'react';
+// JSX File: Home.jsx
+import "./Home.css";
+import React, { useEffect, useRef } from "react";
+import LazyMedia from "../../components/LazyMedia";
+import { useTranslation } from "react-i18next";
 
 // ---- IMPORTS RESOURCES ---- //
-import Video1 from '../../assets/Videos/opening_video.webm';
-import Video2 from '../../assets/Videos/opening_video2.webm';
+import Video1 from "../../assets/Videos/opening_video.webm";
+import Video2 from "../../assets/Videos/opening_video2.webm";
 
-import Image1 from '../../assets/Images/homepage_photo1.webp';
-import Image2 from '../../assets/Images/homepage_photo2.webp';
-import Image3 from '../../assets/Images/homepage_photo4.webp';
-import Image4 from '../../assets/Images/homepage_photo5.webp';
+import Image1 from "../../assets/Images/homepage_photo1.webp";
+import Image2 from "../../assets/Images/homepage_photo2.webp";
+import Image3 from "../../assets/Images/homepage_photo4.webp";
+import Image4 from "../../assets/Images/homepage_photo5.webp";
 
-import LogoHeader from '../../assets/Images/pageantfans_logo.webp';
-import VideoMobile from '../../assets/Videos/VideoMobileOpening.webm';
-import VideoLarge from '../../assets/Videos/HomePage.webm';
+import LogoHeader from "../../assets/Images/pageantfans_logo.webp";
+import OpeningBanner from "../../assets/Videos/Opening_Banner.webm";
 
-import backgroundStarts from '../../assets/Videos/backgroundStar.webm';
+import backgroundStarts from "../../assets/Videos/backgroundStar.webm";
 
 function Home() {
-  const repetitionInterval = 1;
+    const { t } = useTranslation();
+    const repetitionInterval = 1;
+    const animationRef = useRef(null);
 
-  function animationHeader(video) {
-    video.volume = 0;
-    if (video.paused) {
-      video.play();
+    function animationHeader(video) {
+        video.volume = 0;
+        if (video.paused) {
+            video.play();
+        }
     }
-  }
 
-  function logoAnimation(logoHeader) {
-    logoHeader.classList.add("container-logo--animation");
-    logoHeader.style.display = "block";
-  }
+    function logoAnimation(logoHeader, redline) {
+        logoHeader.classList.add("home__container--logo-animation");
+        logoHeader.style.display = "block";
+        redline.classList.add("home__container--text-redline-animation");
+        redline.style.display = "flex";
+    }
 
-  function textsAnimation(subtitle, paragraph) {
-    [subtitle, paragraph].forEach(el => {
-      el.style.display = "block";
-      el.classList.add(`container-text__${el === subtitle ? "subtitle" : "paragraph"}--animation`);
-    });
-  }
+    function textsAnimation(subtitle, paragraph) {
+        [subtitle, paragraph].forEach((el) => {
+            el.style.display = "block";
+            el.classList.add(
+                `home__container-text__${
+                    el === subtitle ? "subtitle" : "paragraph"
+                }-animation`
+            );
+        });
+    }
 
-  useEffect(() => {
-    const video = document.getElementById("bg-header-video-mobile");
-    const elements = {
-      logo: document.getElementById("logo-header"),
-      subtitle: document.getElementById("subtitle-header"),
-      paragraph: document.getElementById("paragraph-header"),
-    };
-  
-    const startAnimation = () => {
-      logoAnimation(elements.logo);
-      textsAnimation(elements.subtitle, elements.paragraph);
-      setTimeout(() => Object.values(elements).forEach(el => (el.style.display = "none")), 4700);
-    };
-  
-    const checkAnimationTrigger = () => {
-      animationHeader(video);
-      if (video.currentTime >= 3.4 && video.currentTime <= 3.7 && !video.paused) {
-        startAnimation();
-      }
-    };
-  
-    const intervalId = setInterval(checkAnimationTrigger, repetitionInterval);
-    return () => clearInterval(intervalId);
-  }, []);
+    useEffect(() => {
+        const video = document.getElementById("bg-header-video-mobile");
+        const elements = {
+            logo: document.getElementById("logo-header"),
+            redline: document.getElementById("redline-header"),
+            subtitle: document.getElementById("subtitle-header"),
+            paragraph: document.getElementById("paragraph-header"),
+        };
+        const startAnimation = () => {
+            logoAnimation(elements.logo, elements.redline);
+            textsAnimation(elements.subtitle, elements.paragraph);
+            setTimeout(
+                () =>
+                    Object.values(elements).forEach(
+                        (el) => (el.style.display = "none")
+                    ),
+                15500
+            );
 
-  return (
-    <section>
-      <nav className='opening'>
-        <div className="opening__container-video">
-          <video src={VideoMobile} autoPlay loop muted playsInline className="container-video__video container-video__video--mobile" id="bg-header-video-mobile"></video>
-          <video src={VideoLarge} autoPlay loop muted playsInline className="container-video__video container-video__video--large" id="bg-header-video-large"></video>
-        </div>
-        <div className="opening__container-logo">
-          <img src={LogoHeader} className="container-logo__logo" id="logo-header" alt="" />
-        </div>
-        <div className="opening__container-text">
-          <h2 className="container-text__subtitle" id="subtitle-header">#1 Creator Community for Beauty Queens in the World.</h2>
-          <p className="container-text__paragraph" id="paragraph-header">Own, and earn from your name, image, and likeness™.</p>
-        </div>
-      </nav>
+            const animation = animationRef.current;
+            animation.style.animation = "none";
+            void animation.offsetWidth;
+            animation.style.animation = "write 7s steps(40) 1 forwards";
+        };
 
-      <div className='opening--separator'></div>
+        const checkAnimationTrigger = () => {
+            animationHeader(video);
+            if (
+                video.currentTime >= 4.1 &&
+                video.currentTime <= 4.5 &&
+                !video.paused
+            ) {
+                startAnimation();
+            }
+        };
+        const intervalId = setInterval(
+            checkAnimationTrigger,
+            repetitionInterval
+        );
+        return () => clearInterval(intervalId);
+    }, []);
 
-      <section className="cards">
-        <video src={backgroundStarts} autoPlay loop muted playsInline preload="auto" className="cards__video" ></video>
-        <div className='cards--grid'>
-          <div className="cards--grid__content--img1">
-            <img className="cards--collage--img" src={Image2} alt="" />
-          </div>
-          <div className="cards--grid__content--video1">
-            <ReactPlayer playing={true} loop={true} playsinline muted preload='auto' url={Video2} height={'auto'} width={'100%'} className="cards--collage--img"></ReactPlayer>
-          </div>
-          <div className="cards--grid__content--img2">
-            <img className="cards--collage--img" src={Image1} alt="" />
-          </div>
-          <div className="cards--grid__content--text">
-            <h3 className='cards--text'>PageantFans creators give their fans access to red carpet events, VIP experiences, and exclusive brand partnership journeys they can't experience anywhere else!</h3>
-          </div>
-          <div className="cards--grid__content--img3">
-            <img className="cards--collage--img" src={Image3} alt="" />
-          </div>
-          <div className="cards--grid__content--video2">
-            <ReactPlayer playing={true} loop={true} playsinline muted preload='auto' url={Video1} height={'auto'} width={'100%'} className="cards--collage--img"></ReactPlayer>
-          </div>
-          <div className="cards--grid__content--img4">
-            <img className="cards--collage--img" src={Image4} alt="" />
-          </div>
-        </div>
-      </section>
-    </section>
-  );
+    return (
+        <section>
+            <nav className="home">
+                <div className="home__container-video">
+                    <video
+                        src={OpeningBanner}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="home__container-video--video"
+                        id="bg-header-video-mobile"
+                    ></video>
+                </div>
+                <div className="home__container--logo">
+                    <img
+                        src={LogoHeader}
+                        className="home__container--logo-image"
+                        id="logo-header"
+                        alt=""
+                    />
+                </div>
+                <div className="home__container--text">
+                    <h2
+                        className="home__container--text-subtitle"
+                        id="subtitle-header"
+                    >
+                        {t("Home_Text1")}
+                    </h2>
+                    <div
+                        className="home__container--text-redline"
+                        id="redline-header"
+                    >
+                        <div className="home__container--text-line"></div>
+                    </div>
+                    <div className="home__container--text-paragraph">
+                        <p
+                            className="home__container--text-paragraph-text"
+                            id="paragraph-header"
+                        >
+                            {t("Home_Text2")}
+                            <span ref={animationRef}>&#160;</span>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <div className="home__separator"></div>
+
+            <section className="home__cards">
+                <LazyMedia
+                    src={backgroundStarts}
+                    className="home__cards-video"
+                    type="video"
+                />
+                <div className="home__cards--grid">
+                    <div className="home__cards--grid-img1">
+                        <LazyMedia
+                            src={Image2}
+                            className="home__cards--grid-media"
+                            alt="Images of two Pageant Fans models"
+                            type="image"
+                        />
+                    </div>
+                    <div className="home__cards--grid-video1">
+                        <LazyMedia
+                            src={Video2}
+                            className="home__cards--grid-media"
+                            type="video"
+                        />
+                    </div>
+                    <div className="home__cards--grid-img2">
+                        <LazyMedia
+                            src={Image1}
+                            className="home__cards--grid-media"
+                            alt="Image of three Pageant Fans models"
+                            type="image"
+                        />
+                    </div>
+                    <div className="home__cards--grid-text">
+                        <h3 className="home__cards--text">{t("Home_Text3")}</h3>
+                    </div>
+                    <div className="home__cards--grid-img3">
+                        <LazyMedia
+                            src={Image3}
+                            className="home__cards--grid-media"
+                            alt="Pageant Fans model from the front"
+                            type="image"
+                        />
+                    </div>
+                    <div className="home__cards--grid-video2">
+                        <LazyMedia
+                            src={Video1}
+                            className="home__cards--grid-media"
+                            type="video"
+                        />
+                    </div>
+                    <div className="home__cards--grid-img4">
+                        <LazyMedia
+                            src={Image4}
+                            className="home__cards--grid-media"
+                            alt="Pageant Fans model from the side"
+                            type="image"
+                        />
+                    </div>
+                </div>
+            </section>
+        </section>
+    );
 }
 
 export default Home;

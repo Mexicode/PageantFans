@@ -1,34 +1,59 @@
-import './Downloads.css'
-import ReactPlayer from 'react-player';
-import backgroundStarts from '../../assets/Videos/backgroundStar.webm';
-import imgMockupIphone from '../../assets/Images/movil.webp';
-import codeQrImg from '../../assets/Images/codigoQR.webp';
-import { Link } from 'react-router-dom'
+// JSX File: Downloads.jsx
+import "./Downloads.css";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LazyMedia from "../../components/LazyMedia";
+
+// ---- IMPORTS RESOURCES ---- //
+import BackgroundStarts from "../../assets/Videos/backgroundStar.webm";
+
+import ImgMockupIphone from "../../assets/Images/movil.webp";
+import CodeQrImg from "../../assets/Images/codigoQR.webp";
 
 function Download() {
+    const { t } = useTranslation();
     return (
-        <section className='download'>
-            <ReactPlayer playing={true} loop={true} playsinline muted preload='auto' url={backgroundStarts} className="download__video"></ReactPlayer>
-            <div className='download__header'>
-                <h1 className='download__header--title'>Download</h1>
-            </div>
-            <div className="download__section">
-                <div className="download__content">
-                    <div className="download__phone">
-                        <img className="download__phone--img" src={imgMockupIphone} alt='' />
-                    </div>
-                    <div className="download__content__text">
-                        <div className="download__QR">
-                            <img className="download__QR--img" src={codeQrImg} alt='' />
+        <section className="download">
+            <LazyMedia
+                src={BackgroundStarts}
+                className="download__video"
+                type="video"
+            />
+            <div className="download__content-main">
+                <div className="download__main-header">
+                    <h1 className="download__header--title">{t("Download")}</h1>
+                </div>
+                <div className="download__content-section">
+                    <div className="download__section-two">
+                        <div className="download__two-phone">
+                            <LazyMedia
+                                src={ImgMockupIphone}
+                                className="download__phone--img"
+                                alt="Mobile with the PageantFans application"
+                                type="image"
+                            />
                         </div>
-                        <div className="download__content__QR">
-                            <p className="download__content__QR--text"> The only fan app that gives you exclusive, VIP-level access to special
-                                content and communication with your favorite pageant contestants, titleholders and beauty
-                                queens from anywhere in the world. On PageantFans, you're not just a follower, you're family.
-                            </p>
-                        </div>
-                        <div className="download__button">
-                            <Link to='/download/downloadapp'><button className="download__button--button">Download</button></Link>
+                        <div className="download__two-text">
+                            <div className="download__text-qr">
+                                <LazyMedia
+                                    src={CodeQrImg}
+                                    className="download__text-qr--img"
+                                    alt="PageantFans page QR code"
+                                    type="image"
+                                />
+                            </div>
+                            <div className="download__text-paragraph">
+                                <p className="download__paragraph-text">
+                                    {t("Download-Text1")}
+                                </p>
+                            </div>
+                            <div className="download__button">
+                                <Link to="/download/downloadapp">
+                                    <button className="button__global--red">
+                                        {t("Download")}
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

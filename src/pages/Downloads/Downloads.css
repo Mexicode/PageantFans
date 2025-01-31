@@ -1,9 +1,10 @@
+/* --------------------------Start of Download styles.-------------------------- */
 .download {
     position: relative;
     width: 100%;
     height: auto;
     overflow: hidden;
-    padding-bottom: 100px;
+    animation: blur-in 0.4s linear both;
 }
 
 .download__video {
@@ -19,8 +20,7 @@
     object-fit: cover;
 }
 
-.download__header {
-    padding-top: 5rem;
+.download__main-header {
     text-align: center;
     color: #ffffff;
 }
@@ -32,12 +32,18 @@
     margin-bottom: 24px;
 }
 
-.download__section {
+.download__content-section {
     display: flex;
     justify-content: center;
 }
 
-.download__content {
+.download__content-main {
+    height: 100vh;
+    margin: 120px 0px;
+    flex-direction: column;
+}
+
+.download__section-two {
     width: 75%;
     padding: 30px 0px;
     border-radius: 20px;
@@ -50,7 +56,7 @@
     grid-auto-rows: minmax(35px, auto);
 }
 
-.download__phone {
+.download__two-phone {
     width: auto;
 }
 
@@ -65,12 +71,11 @@
     overflow: hidden;
 }
 
-
-.download__QR--img {
-    width: 40%
+.download__text-qr--img {
+    width: 40%;
 }
 
-.download__content__QR--text {
+.download__paragraph-text {
     color: #fff;
     text-align: left;
     font-size: 16px;
@@ -82,87 +87,84 @@
     margin-top: 2%;
 }
 
-.download__button--button {
-    border: none;
-    background-color: #e30426;
-    color: rgb(255, 255, 255);
-    padding: 10px 12px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.download__button--button:hover {
-    background-color: #ffffff;
-    color: #e30426;
-    backdrop-filter: blur(5px);
-    animation: download__button-hover 0.9s linear both;
-}
-
-
 /* --------------------------Responsive.-------------------------- */
 
 /* Smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-@media (min-width:320px) {
+@media (min-width: 320px) {
+    .download__content-main {
+        margin: 120px 0px;
+        padding-bottom: 100px;
+    }
+
+    .download__content__text {
+        width: 85%;
+        margin: 24px 0 0;
+        overflow: hidden;
+    }
+
     .download__header--title {
         font-size: 48px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 16px;
+        margin: 0;
+        padding: 0 24px 24px;
     }
 
-    .download__content {
+    .download__section-two {
+        padding: 24px 0px;
+        width: 80%;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
-    .download__QR {
+    .download__text-qr {
         display: none;
     }
 }
 
 /* Smartphones, Android phones, landscape iPhone */
-@media (min-width:480px) {
+@media (min-width: 480px) {
     .download__header--title {
         font-size: 60px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 17px;
     }
 
-    .download__QR {
+    .download__text-qr {
         display: none;
     }
 }
 
 /* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-@media (min-width:600px) {
+@media (min-width: 600px) {
     .download__header--title {
         font-size: 72px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 18px;
+        margin: 0;
+        padding: 24px;
     }
-
 }
 
 /* Tablet, landscape iPad, lo-res laptops ands desktops */
-@media (min-width:801px) {
+@media (min-width: 800px) {
+    .download__content-main {
+        margin: 120px 0px 0px 0px;
+    }
     .download__header--title {
         font-size: 84px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 19px;
     }
 
-
-
-    .download__content {
-        margin: 0px 20%;
+    .download__section-two {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
@@ -172,36 +174,41 @@
 }
 
 /* Big landscape tablets, laptops, and desktops */
-@media (min-width:1025px) {
+@media (min-width: 1025px) {
     .download__header--title {
         font-size: 96px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 20px;
+        padding: 24px 0;
     }
 
-    .download__QR {
+    .download__text-qr {
         display: block;
     }
 
-    .download__QR--img {
+    .download__text-qr--img {
         width: 60%;
     }
 }
 
 /* hi-res laptops and desktops */
-@media (min-width:1281px) {
+@media (min-width: 1281px) {
     .download__header--title {
         font-size: 108px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 21px;
     }
 
-    .download__QR--img {
+    .download__text-qr--img {
         width: 40%;
+    }
+
+    .download__two-text {
+        padding-right: 80px;
     }
 }
 
@@ -211,8 +218,16 @@
         font-size: 120px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 22px;
+    }
+
+    .download__section-two {
+        width: 60%;
+    }
+
+    .download__text-qr--img {
+        width: 30%;
     }
 }
 
@@ -222,8 +237,12 @@
         font-size: 144px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 23px;
+    }
+
+    .download {
+        padding-bottom: 350px;
     }
 }
 
@@ -233,7 +252,11 @@
         font-size: 180px;
     }
 
-    .download__content__QR--text {
+    .download__paragraph-text {
         font-size: 24px;
+    }
+
+    .download__text-qr--img {
+        width: 25%;
     }
 }

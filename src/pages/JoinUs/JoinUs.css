@@ -1,23 +1,35 @@
-.joinus {
-    padding: 20px;
-    background-color: #fff;
+/* --------------------------Start of Join Us styles.-------------------------- */
+.join-us {
+    width: 100%;
+    animation: blur-in 0.4s linear both;
 }
 
-.joinus__header-arrow {
-    background: none;  
-    border: none;      
-    padding: 0;       
-    font-size: 24px;   
-    color: white;      
+.join-us__form {
+    padding: 1px;
 }
 
-.joinus__header-link {
-    background: none;  
-    border: none;      
-    cursor: pointer;   
+.join-us__form-header {
+    padding: 2% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
-.joinus__title {
+.join-us__form-header--link {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.join-us__form-header--arrow {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 48px;
+    color: white;
+}
+
+.join-us__form-header--title {
     font-weight: lighter;
     text-align: center;
     margin-right: auto;
@@ -25,101 +37,94 @@
     margin-top: auto;
     margin-bottom: auto;
     color: #000000;
+    font-size: 120px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
-.joinus__header {
-    width: 100%;
-    padding: 1px;
+.join-us__features {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 
-.joinus__form-select, .joinus__form-input {
+.join-us__form-content {
+    display: grid;
+    width: 80%;
+    height: auto;
+    margin: 5% 0%;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(394px, 1fr));
+    grid-auto-rows: minmax(35px, auto);
+}
+
+.join-us__form-content--grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-us__form-content--image {
+    align-items: center;
+    width: 65%;
+    height: auto;
+}
+
+.join-us__form-content--fields {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 0 auto;
+    max-width: 80%;
+    border-radius: 24px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.join-us__form-content--title {
+    font-size: 48px;
+}
+
+.join-us__form-content--description {
+    padding: 3% 0 5% 0;
+    font-size: 22px;
+}
+
+.join-us__form-content--label {
+    margin-top: 2%;
+    font-size: 22px;
+}
+
+.join-us__form-content--required {
+    color: #e30426;
+    font-size: 20px;
+}
+
+.join-us__form-content--select,
+.join-us__form-content--input {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 25px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.joinus__form-fields {
-    background-color: white;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    border-radius: 24px;
-    padding: 30px;
-}
-
-.joinus__form-description {
-    padding: 3% 0 5% 0;
-}
-
-.joinus__form-label {
-    margin-top: 2%;
-}
-
-.joinus__form-required {
-    color: #E30426;
-    font-size: 20px;
-}
-
-.joinus__form-image {
-    height: auto; 
-}
-
-.joinus__form-button {
-    border: none;
-    background-color: #e30426;
-    color: #ffffff;
-    padding: 10px 12px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 30px;
-}
-
-.joinus__form-button:hover {
-    border: 2px solid #e30426;
-    background-color: #ffffff;
+.join-us__form-content--required-text {
     color: #e30426;
-    backdrop-filter: blur(5px);
-    animation: news__button-hover 0.9s linear both;
+    margin-bottom: 10px;
 }
-.joinus__form-input--error {
+
+.join-us__form-content--input--error {
     border: 1px solid red;
 }
 
-.joinus__form-required-text {
-    color: #E30426;
-    padding:0;
-}
-
-.joinus__form-content--hover {
-    display: flex;
-    flex-direction: row; 
-    align-items: flex-start; 
-    justify-content: center; 
-    margin-top: 5%;
-    margin-right: auto;
-    margin-left: auto;
-    width: 80%;
-}
-
-.joinus__form{
-    padding: 1px;
-}
-
-.joinus__form-select, .joinus__form-input {
-        width: 100%;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        height: 25px;
-}
-
-/* MENSAJE ERROR */
-.message {
+.join-us__message {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -134,373 +139,286 @@
     animation: fadeIn 0.5s ease-out;
 }
 
-.message.success {
+.join-us__message.success {
     background-color: white;
     color: #059033;
     border: 2px solid #059033;
 }
 
-.message.error {
+.join-us__message.error {
     background-color: white;
     color: red;
     border: 2px solid red;
 }
 
-.message p {
+.join-us__message p {
     margin-left: 10px;
 }
 
-.message svg {
+.join-us__message svg {
     font-size: 24px;
 }
 
-.joinus__form-content {
-    position: relative;
-}
+/* --------------------------Responsive.-------------------------- */
 
+/* Smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width: 320px) {
+    .join-us__form-content--fields {
+        max-width: 100%;
+        padding: 20px;
+    }
 
-/* Estilos para dispositivos móviles */
-@media only screen and (min-width: 300px) and (max-width: 479px) {
-    .joinus__title {
-        font-size: 48px;
-    }
-    .joinus__form-image {
-        display: none;
-    }
-    .joinus__form-title {
-        font-size: 18px;
-    }
-    .joinus__form-description {
-        font-size: 16px;
-    }
-    .joinus__form-label {
-        font-size: 14px;
-    }
-    .joinus__form-required-text {
-        font-size: 16px;
-    }  
-    .joinus__form-button {
-        width: 70px;
-        font-size: 16px;
-    }    
-}
-
-@media only screen and (min-width: 480px) and (max-width: 599px){
-    .joinus__title {
-        font-size: 60px;
-    }
-    .joinus__form-image {
-        display: none;
-    }
-    .joinus__form-title {
-        font-size: 20px;
-    }
-    .joinus__form-description {
-        font-size: 17px;
-    }
-    .joinus__form-label {
-        font-size: 15px;
-    }
-    .joinus__form-required-text {
-        font-size: 17px;
-    }  
-    .joinus__form-button {
-        width: 70px;
-        font-size: 16px;
-    } 
-    .joinus__header-arrow {      
-        font-size: 25px;         
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 799px){
-    .joinus__title {
-        font-size: 72px;
-    }
-    .joinus__form-image {
-        display: none;
-    }
-    .joinus__form-title {
-        font-size: 24px;
-    }
-    .joinus__form-description {
-        font-size: 18px;
-    }
-    .joinus__form-label {
-        font-size: 16px;
-    }
-    .joinus__form-required-text {
-        font-size: 18px;
-    }  
-    .joinus__form-button {
-        width: 80px;
-        font-size: 16px;
-    }
-    .joinus__header-arrow {      
-        font-size: 30px;         
-    } 
-}
-
-@media only screen and (min-width: 800px){
-    .joinus__title {
-        font-size: 84px;
-    }
-    .joinus__form-image {
-        width: 50%; 
-        margin-top: auto;
-        margin-bottom: auto;
+    .join-us__form-content {
         display: block;
     }
-    .joinus__form-title {
-        font-size: 28px;
-    }
-    .joinus__form-description {
-        font-size: 19px;
-    }
-    .joinus__form-label {
-        font-size: 17px;
-    }
-    .joinus__form-required-text {
-        font-size: 19px;
-    }  
-    .joinus__form-button {
-        width: 90px;
-        font-size: 16px;
-    } 
-    .joinus__header-arrow {      
-        font-size: 35px;         
-    }
-}
 
-@media only screen and (min-width: 951px) {
-    .joinus__form-fields {
-        width: 80%;
-    }
-}
-
-@media only screen and (min-width: 1025px) {
-    .joinus__title {
-        font-size: 96px;
-    }
-    .joinus__form-image {
-        width: 100%; 
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-    .joinus__form-title {
-        font-size: 30px;
-    }
-    .joinus__form-description {
-        font-size: 20px;
-    }
-    .joinus__form-label {
-        font-size: 18px;
-    }
-    .joinus__form-required-text {
-        font-size: 20px;
-    }  
-    .joinus__form-button {
-        width: 100px;
-        font-size: 16px;
-    } 
-    .joinus__header-arrow {      
-        font-size: 40px;         
-    }
-}
-
-@media only screen and (min-width: 1100px) {
-    .joinus__form-fields {
-        width: 80%;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .joinus__title {
-        font-size: 108px;
-    }
-    .joinus__form-image {
-        width: 100%; 
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-    .joinus__form-title {
-        font-size: 31px;
-    }
-    .joinus__form-description {
-        font-size: 21px;
-    }
-    .joinus__form-label {
-        font-size: 19px;
-    }
-    .joinus__form-required-text {
-        font-size: 21px;
-    }  
-    .joinus__form-button {
-        width: 100px;
-        font-size: 16px;
-    } 
-    .joinus__header-arrow {      
-        font-size: 55px;         
+    .join-us__form-content--image {
+        display: none;
     }
 
-}
-
-@media only screen and (min-width: 1300px) {
-    .joinus__form-fields {
-        width: 80%;
-    }
-    .joinus__form-image {
-        width: 1100px;
-        margin-top: auto;
-        margin-bottom: 40px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-}
-
-@media only screen and (min-width: 1450px) {
-    .joinus__form-fields {
-        width: 35%;
-        margin-right: 5%;
-    } 
-    .joinus__form-image {
-        width: 630px;
-        margin-top: -30px;
-        margin-bottom: 40px;
-        margin-right: auto;
-        margin-left: auto;
-    }  
-}
-
-@media only screen and (min-width: 1550px) { 
-    .joinus__form-image {
-        width: 630px;
-        margin-top: -60px;
-        margin-bottom: 40px;
-        margin-right: auto;
-        margin-left: auto;
-    } 
-}
-
-@media only screen and (min-width: 1850px) {
-    .joinus__form-fields {
-        width: 25%;
-        margin-right: 8%;
-    }  
-    .joinus__form-image {
-        width: 630px;
-        margin-top: -30px;
-        margin-bottom: 40px;
-        margin-right: auto;
-        margin-left: auto;
-    }  
-    .joinus__form-content--hover {
-        width: 100%;
-    } 
-}
-
-@media only screen and (min-width: 1920px) {
-    .joinus__title {
-        font-size: 120px;
-    }
-    .joinus__form-image {
-        margin-bottom: auto;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .joinus__form-fields {
-        width: 35%;
-    }
-    .joinus__form-title {
-        font-size: 37px;
-    }
-    .joinus__form-description {
-        font-size: 22px;
-    }
-    .joinus__form-label {
-        font-size: 20px;
-    }
-    .joinus__form-required-text {
-        font-size: 22px;
-    }  
-    .joinus__form-button {
-        width: 100px;
-        font-size: 16px;
-    } 
-    .joinus__header-arrow {      
-        font-size: 60px;         
-    }
-}
-
-@media only screen and (min-width: 2560px) {
-    .joinus__title {
-        font-size: 144px;
-    }
-    .joinus__form-image {
-        width: 930px;
-        margin-top: -100px;
-        margin-bottom: 40px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .joinus__form-fields {
-        width: 700px;
-        height: 610px;
-        padding: 50px;
-    }
-    .joinus__form-title {
-        font-size: 40px;
-    }
-    .joinus__form-description {
-        font-size: 23px;
-    }
-    .joinus__form-label {
-        font-size: 21px;
-    }
-    .joinus__form-required-text {
-        padding: 23px 0;
-        font-size: 23px;
-    }  
-    .joinus__form-button {
-        width: 100px;
-        font-size: 16px;
-    } 
-}
-
-@media only screen and (min-width: 3840px) {
-    .joinus__title {
-        font-size: 180px;
-    }
-    .joinus__form-image {
-        width: 930px;
-        margin-top: -100px;
-        margin-bottom: 40px;
-        margin-left: 20%;
-    }
-    .joinus__form-title {
+    /* Texts */
+    .join-us__form-header--title {
         font-size: 48px;
     }
-    .joinus__form-description {
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
         font-size: 24px;
     }
-    .joinus__form-label {
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
+        font-size: 16px;
+    }
+}
+
+/* Smartphones, Android phones, landscape iPhone */
+@media (min-width: 480px) {
+    .join-us__form-content {
+        display: block;
+    }
+
+    .join-us__form-content--image {
+        display: none;
+    }
+
+    /* Texts */
+    .join-us__form-header--title {
+        font-size: 60px;
+    }
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
+        font-size: 32px;
+    }
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
+        font-size: 17px;
+    }
+}
+
+/* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+    .join-us__form-content {
+        display: block;
+    }
+
+    .join-us__form-content--image {
+        display: none;
+    }
+
+    /* Texts */
+    .join-us__form-header--title {
+        font-size: 72px;
+    }
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
+        font-size: 36px;
+    }
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
+        font-size: 18px;
+    }
+}
+
+/* Tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width: 800px) {
+    .join-us__form-content {
+        display: block;
+    }
+
+    .join-us__form-content--image {
+        display: none;
+    }
+
+    /* Texts */
+    .join-us__form-header--title {
+        font-size: 84px;
+    }
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
+        font-size: 40px;
+    }
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
+        font-size: 19px;
+    }
+}
+
+/* Big landscape tablets, laptops, and desktops */
+@media (min-width: 1025px) {
+    .join-us__form-content--fields {
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .join-us__form-content {
+        display: grid;
+        width: 90%;
+    }
+
+    .join-us__form-content--image {
+        display: block;
+        width: 90%;
+    }
+
+    /* Texts */
+    .join-us__form-header--title {
+        font-size: 96px;
+    }
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
+        font-size: 44px;
+    }
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
+        font-size: 20px;
+    }
+}
+
+/* hi-res laptops and desktops */
+@media (min-width: 1281px) {
+    .join-us__form-content--fields {
+        max-width: 80%;
+        padding: 30px;
+    }
+
+    .join-us__form-content {
+        display: grid;
+        width: 80%;
+    }
+
+    .join-us__form-content--image {
+        display: block;
+        width: 65%;
+    }
+
+    /* Texts */
+    .join-us__form-header--title {
+        font-size: 108px;
+    }
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
+        font-size: 46px;
+    }
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
+        font-size: 21px;
+    }
+}
+
+/* Large desktops (1920px and above) */
+@media (min-width: 1920px) {
+    .join-us__form-content {
+        display: grid;
+    }
+
+    .join-us__form-content--image {
+        display: block;
+    }
+
+    /* Texts */
+    .join-us__form-header--title {
+        font-size: 120px;
+    }
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
+        font-size: 48px;
+    }
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
         font-size: 22px;
     }
-    .joinus__form-required-text {
-        font-size: 24px;
-    }  
-    .joinus__form-button {
-        width: 100px;
-        font-size: 16px;
+}
 
-    } 
-    .joinus__form-fields {
-        border-radius: 24px;
-        padding: 30px;
-        margin-left: auto;
-        margin-right: 8%;
-        width: 30%;
-        height: 610px;
-        padding: 50px;
+/* Ultra-wide desktops (2560px and above) */
+@media (min-width: 2560px) {
+    .join-us__form-content {
+        display: grid;
+    }
+
+    .join-us__form-content--image {
+        display: block;
+    }
+
+    /* Texts */
+    .join-us__form-header--title {
+        font-size: 144px;
+    }
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
+        font-size: 56px;
+    }
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
+        font-size: 23px;
+    }
+}
+
+/* 4K screens (3840px and above) */
+@media (min-width: 3840px) {
+    .join-us__form-content {
+        display: grid;
+    }
+
+    .join-us__form-content--image {
+        display: block;
+    }
+
+    /* Texts */
+    .join-us__form-header--title {
+        font-size: 180px;
+    }
+
+    .join-us__form-header--arrow,
+    .join-us__form-content--title {
+        font-size: 72px;
+    }
+
+    .join-us__form-content--description,
+    .join-us__form-content--required-text,
+    .join-us__form-content--label {
+        font-size: 24px;
     }
 }

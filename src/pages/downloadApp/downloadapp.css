@@ -1,14 +1,31 @@
-/* --------------------------Start of AppDownload styles.-------------------------- */
+/* --------------------------Start of App Download styles.-------------------------- */
+.download-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: blur-in 0.4s linear both;
+}
 
-.download--app__video {
+.download-app__video {
     height: 550px;
 }
 
-.download--app__content {
-    text-align: center;
+.download-app__video video {
+    width: 100%;
+    height: auto;
 }
 
-.download--app__content--title {
+.download-app__content {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.download-app__content--title {
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -16,31 +33,33 @@
     color: #000000;
 }
 
-.download--app__content--grid {
+.download-app__content--grid {
+    width: 70%;
+    margin: 30px 0px;
     justify-items: center;
     align-items: center;
     display: grid;
+    gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
     grid-auto-rows: minmax(35px, auto);
 }
 
-.download--app__content--content {
+.download-app__content--content {
     padding-top: 20px;
-    width: 75%;
     display: flex;
     flex-direction: column;
     color: #545f71;
     margin-bottom: 20px;
 }
 
-.download--app__content--subtitle {
+.download-app__content--subtitle {
     color: #545f71;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-size: 25px;
     text-align: left;
 }
 
-.download--app__content--description {
+.download-app__content--description {
     width: 100%;
     color: #545f71;
     margin-bottom: 30px;
@@ -50,9 +69,10 @@
     align-items: center;
     text-align: left;
     flex-direction: column;
+    line-height: 1.5;
 }
 
-.download--app__content--phone {
+.download-app__content--phone {
     text-align: center;
     width: 300px;
     height: 540px;
@@ -60,120 +80,124 @@
     position: relative;
 }
 
-.download--app__content--phone--video {
+.download-app__content--phone--video {
     position: absolute;
     object-fit: contain;
     clip-path: inset(9px 29px 10px 27px round 40px);
 }
 
-.download--app__diagonal {
+.download-app__diagonal {
     width: 100%;
-    background: #fdece6;
     padding: 60px 0px;
+    display: flex;
+    background: #fdece6;
     clip-path: polygon(0% 0%, 100% 40px, 100% 100%, 0% 100%);
     overflow: visible;
-    display: grid;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+}
+
+.download-app__diagonal--grid {
+    width: 70%;
+    display: grid;
+    gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
-    grid-gap: 50px;
     grid-auto-rows: minmax(35px, auto);
 }
 
-.download--app__video__two--video {
-    width: 250px;
+.download-app__video--two--video {
+    width: 260px;
     height: 540px;
     overflow: hidden;
     position: relative;
 }
 
-.download--app__text {
-    width: 75%;
-    gap: 10px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.download-app__text {
+    width: 100%;
     display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
-.download--app__text--title {
+.download-app__text--title {
     text-align: left;
     color: #545f71;
     font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 24px;
 }
 
-.download--app__text--description {
+.download-app__text--description {
     display: flex;
     justify-content: center;
-    width: 100%;
     color: #545f71;
     text-align: left;
     flex-direction: column;
+    line-height: 1.5;
     font-size: 25px;
 }
 
-.download--app__stories {
-    margin: 46px 0px;
+.download-app__stories {
+    width: 70%;
     justify-items: center;
     align-items: center;
     display: grid;
+    gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
     grid-auto-rows: minmax(35px, auto);
 }
 
-.download--app__stories__content {
-    width: 75%;
-    gap: 20px;
+.download-app__stories--content {
     display: flex;
-    margin-bottom: 5%;
     justify-content: left;
     align-items: center;
     flex-direction: column;
 }
 
-.download--app__stories__content--title {
+.download-app__stories--content--title {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     color: #545f71;
     text-align: left;
     flex-direction: column;
+    line-height: 1.5;
+    margin-bottom: 24px;
 }
 
-.download--app__stories__content--description {
+.download-app__stories--content--description {
     display: flex;
     justify-content: center;
     font-size: 19px;
     width: 100%;
-    margin-top: 3%;
     text-align: left;
     color: #545f71;
     flex-direction: column;
+    line-height: 1.5;
 }
 
-.download--app__stories-image {
+.download-app__stories--image {
     display: flex;
-    width: 75%;
+    width: 100%;
 }
 
-.download--app__exclusive {
+.download-app__exclusive {
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1%;
 }
 
-.download--app__exclusive--image {
+.download-app__exclusive--image {
+    width: 100%;
     display: flex;
-    width: 75%;
-    margin-top: 15%;
 }
 
-.download--app__exclusive--description {
-    width: 75%;
-    padding: 15px;
+.download-app__exclusive--description {
+    width: 100%;
     height: auto;
     font-weight: bold;
     font-size: 20px;
@@ -181,43 +205,49 @@
     color: #545f71;
 }
 
-.download--app__features {
-    margin: 24px 0px;
+.download-app__features {
+    width: 70%;
     display: grid;
+    gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
-    grid-gap: 50px;
-    gap: 20px;
     grid-auto-rows: minmax(35px, auto);
     align-items: center;
-    justify-items: center
+    justify-items: center;
 }
 
-.download--app__card {
-    width: 80%;
+.download-app__features--card,
+.download-app__features--card--QR {
+    width: 100%;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 68px 20px;
+    padding: 68px 0px;
     text-align: center;
-    box-shadow: rgb(149 157 165 / 42%) 0px 8px 24px
+    box-shadow: rgb(149 157 165 / 42%) 0px 8px 24px;
 }
 
-.download--app__card--icon {
-    width: '105px';
-    height: '105px';
+.download-app__features--card--icon {
+    width: "105px";
+    height: "105px";
 }
 
-.download--app__card--QR {
+.download-app__features--card--QR--img {
     margin-top: 20px;
     width: 105px;
 }
 
-.download--app__card--tittle {
+.download-app__features--card--title {
     color: rgb(77, 77, 77);
     margin-bottom: 10px;
     font-size: 35px;
 }
 
-.download--app__card--subtitle {
+.download-app__features--card--QR--title {
+    color: rgb(77, 77, 77);
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.download-app__features--card--QR--subtitle {
     color: rgb(172, 172, 172);
     text-align: center;
     line-height: 150%;
@@ -226,645 +256,822 @@
 /* --------------------------Responsive.-------------------------- */
 
 /* Smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-@media (min-width:320px) {
-    .download--app__content {
+@media (min-width: 320px) {
+    .download-app__content {
         margin: 24px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        overflow: hidden;
+        display: block;
+        margin: 24px 0px;
+        width: 80%;
+    }
+
+    .download-app__stories {
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        margin-top: 24px;
+        width: 80%;
+    }
+
+    .download-app__features {
+        grid-template-columns: 1fr;
+        margin: 24px 0px;
+        width: 80%;
+    }
+
+    .download-app__content--title {
         font-size: 24px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 18px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 16px;
-        line-height: 1.5;
     }
 
-    .download--app__diagonal {
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 24px 0px;
-    }
-
-    .download--app__video__two {
+    .download-app__video--two {
         order: 2;
     }
 
-    .download--app__text {
+    .download-app__text {
         order: 1;
         width: 100%;
         align-items: center;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
-        font-size: 24px;
-        margin-bottom: 24px;
-    }
-
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 16px;
-    }
-
-    .download--app__stories__content--title {
+    .download-app__text--title {
         font-size: 24px;
     }
 
-    .download--app__stories__content--description {
+    .download-app__text--description {
+        align-items: center;
         font-size: 16px;
     }
 
-    .download--app__exclusive--image {
+    .download-app__stories--content--title {
+        font-size: 24px;
+    }
+
+    .download-app__features--card--QR {
+        grid-column: span 1;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 16px;
+    }
+
+    .download-app__exclusive--image {
         order: 2;
-        margin: 24px 0px;
+        margin-top: 24px;
     }
 
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 1;
         font-size: 18px;
+    }
+
+    .download-app__diagonal--grid {
+        overflow: hidden;
+        grid-template-columns: 1fr;
+        width: 85%;
+    }
+
+    .download-app__exclusive {
+        overflow: hidden;
+        grid-template-columns: 1fr;
+        width: 80%;
     }
 }
 
 /* Smartphones, Android phones, landscape iPhone */
-@media (min-width:480px) {
-    .download--app__content {
+@media (min-width: 480px) {
+    .download-app__content {
         margin: 34px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        overflow: hidden;
+        margin: 34px 0px;
+        width: 80%;
+    }
+
+    .download-app__stories {
+        overflow: hidden;
+        margin-top: 34px;
+        width: 80%;
+    }
+
+    .download-app__features {
+        margin: 34px 0px;
+        width: 80%;
+    }
+
+    .download-app__content--title {
         font-size: 32px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 20px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 17px;
-        line-height: 1.5;
     }
 
-    .download--app__diagonal {
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 24px 0px;
-    }
-
-    .download--app__video__two {
+    .download-app__video--two {
         order: 2;
     }
 
-    .download--app__text {
+    .download-app__text {
         order: 1;
         width: 100%;
         align-items: center;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
-        font-size: 32px;
-        margin-bottom: 24px;
+    .download-app__features--card--QR {
+        grid-column: span 1;
     }
 
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 17px;
-    }
-
-    .download--app__stories__content--title {
+    .download-app__text--title {
         font-size: 32px;
     }
 
-    .download--app__stories__content--description {
+    .download-app__text--description {
+        align-items: center;
         font-size: 17px;
     }
 
-    .download--app__exclusive--image {
+    .download-app__stories--content--title {
+        font-size: 32px;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 17px;
+    }
+
+    .download-app__exclusive--image {
         order: 2;
-        margin: 24px 0px;
+        margin-top: 24px;
     }
 
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 1;
         font-size: 20px;
+    }
+
+    .download-app__diagonal--grid {
+        overflow: hidden;
+        width: 80%;
+    }
+
+    .download-app__exclusive {
+        overflow: hidden;
+        width: 80%;
     }
 }
 
 /* Portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-@media (min-width:600px) {
-    .download--app__content {
+@media (min-width: 600px) {
+    .download-app__content {
         margin: 34px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        overflow: hidden;
+        display: grid;
+        margin: 34px 0px;
+        width: 80%;
+    }
+
+    .download-app__stories {
+        overflow: hidden;
+        margin-top: 34px;
+        width: 80%;
+    }
+
+    .download-app__features {
+        grid-template-columns: repeat(auto-fit, minmax(298.5px, 1fr));
+        margin: 34px 0px;
+        width: 80%;
+    }
+
+    .download-app__content--title {
         font-size: 36px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 24px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 18px;
-        line-height: 1.5;
     }
-    .download--app__diagonal {
+
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 24px 0px;
-    }
-
-    .download--app__video__two {
+    .download-app__video--two {
         order: 2;
     }
 
-    .download--app__text {
+    .download-app__text {
         order: 1;
         width: 100%;
         align-items: center;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
-        font-size: 36px;
-        margin-bottom: 24px;
-    }
-
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 18px;
-    }
-
-    .download--app__stories__content--title {
+    .download-app__text--title {
         font-size: 36px;
     }
 
-    .download--app__stories__content--description {
+    .download-app__text--description {
+        align-items: center;
         font-size: 18px;
     }
 
-    .download--app__exclusive--image {
+    .download-app__stories--content--title {
+        font-size: 36px;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 18px;
+    }
+
+    .download-app__exclusive--image {
         order: 2;
-        margin: 24px 0px;
+        margin-top: 24px;
     }
 
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 1;
         font-size: 24px;
     }
 
-    .download--app__stories-image{
+    .download-app__stories--image {
         width: 100%;
+    }
+
+    .download-app__features--card--QR {
+        grid-column: span 1;
+    }
+
+    .download-app__diagonal--grid {
+        grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+        overflow: hidden;
+        width: 80%;
+    }
+
+    .download-app__exclusive {
+        overflow: hidden;
+        width: 80%;
     }
 }
 
 /* Tablet, landscape iPad, lo-res laptops ands desktops */
-@media (min-width:801px) {
-    .download--app__content {
+@media (min-width: 801px) {
+    .download-app__content {
         margin: 64px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        overflow: hidden;
+        display: grid;
+        margin: 64px 0px;
+        width: 80%;
+    }
+
+    .download-app__stories {
+        overflow: hidden;
+        grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+        margin-top: 64px;
+        width: 80%;
+    }
+
+    .download-app__features {
+        margin: 64px 0px;
+        width: 80%;
+    }
+
+    .download-app__content--title {
         font-size: 40px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 28px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 19px;
-        line-height: 1.5;
     }
 
-    .download--app__diagonal {
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 24px 50px;
-    }
-
-    .download--app__video__two {
+    .download-app__video--two {
         order: 1;
     }
 
-    .download--app__text {
+    .download-app__text {
         order: 2;
         width: 100%;
         align-items: center;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
+    .download-app__text--title {
         font-size: 40px;
+    }
+
+    .download-app__text--description {
+        align-items: center;
+        font-size: 19px;
+    }
+
+    .download-app__stories--content--title {
+        font-size: 40px;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 19px;
+    }
+
+    .download-app__exclusive--image {
+        order: 1;
         margin-bottom: 24px;
     }
 
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 19px;
-    }
-
-    .download--app__stories__content--title {
-        font-size: 40px;
-    }
-
-    .download--app__stories__content--description {
-        font-size: 19px;
-    }
-
-    .download--app__exclusive--image {
-        order: 1;
-        margin: 24px 0px;
-    }
-
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 2;
         font-size: 28px;
+    }
+
+    .download-app__features--card--QR {
+        grid-column: span 2;
+    }
+
+    .download-app__diagonal--grid {
+        grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+        overflow: hidden;
+        width: 80%;
+    }
+
+    .download-app__exclusive {
+        overflow: hidden;
+        width: 80%;
     }
 }
 
 /* Big landscape tablets, laptops, and desktops */
-@media (min-width:1025px) {
-    .download--app__content {
+@media (min-width: 1025px) {
+    .download-app__content {
         margin: 64px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__stories {
+        grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+        margin-top: 64px;
+        width: 70%;
+    }
+
+    .download-app__features {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__content--title {
         font-size: 44px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 30px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 20px;
-        line-height: 1.5;
     }
 
-    .download--app__diagonal {
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 24px 200px;
-    }
-
-    .download--app__video__two {
+    .download-app__video--two {
         order: 1;
     }
 
-    .download--app__text {
+    .download-app__text {
         order: 2;
-        width: 80%;
+        width: 100%;
         align-items: center;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
+    .download-app__text--title {
         font-size: 44px;
+    }
+
+    .download-app__text--description {
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .download-app__stories--content--title {
+        font-size: 44px;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 20px;
+    }
+
+    .download-app__exclusive--image {
+        order: 1;
         margin-bottom: 24px;
     }
 
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 20px;
-    }
-
-    .download--app__stories__content--title {
-        font-size: 44px;
-    }
-
-    .download--app__stories__content--description {
-        font-size: 20px;
-    }
-
-    .download--app__exclusive--image {
-        order: 1;
-        margin: 24px 0px;
-    }
-
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 2;
         font-size: 30px;
     }
 
-    .download--app__stories {
-        margin: 46px 35px;
+    .download-app__features--card--QR {
+        grid-column: span 2;
+    }
+
+    .download-app__diagonal--grid {
+        width: 70%;
+    }
+
+    .download-app__exclusive {
+        width: 70%;
     }
 }
 
 /* hi-res laptops and desktops */
-@media (min-width:1281px) {
-    .download--app__content {
+@media (min-width: 1281px) {
+    .download-app__content {
         margin: 64px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__stories {
+        margin-top: 64px;
+        width: 70%;
+    }
+
+    .download-app__features {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__content--title {
         font-size: 46px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 31px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 21px;
-        line-height: 1.5;
     }
-    
-    .download--app__diagonal {
+
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 24px 300px;
+    .download-app__features--card--QR {
+        grid-column: span 2;
     }
 
-    .download--app__video__two {
+    .download-app__video--two {
         order: 1;
     }
 
-    .download--app__text {
+    .download-app__text {
         order: 2;
         width: 100%;
         align-items: flex-start;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
+    .download-app__text--title {
         font-size: 46px;
+    }
+
+    .download-app__text--description {
+        align-items: center;
+        font-size: 21px;
+    }
+
+    .download-app__stories--content--title {
+        font-size: 46px;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 21px;
+    }
+
+    .download-app__exclusive--image {
+        order: 1;
         margin-bottom: 24px;
     }
 
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 21px;
-    }
-
-    .download--app__stories__content--title {
-        font-size: 46px;
-    }
-
-    .download--app__stories__content--description {
-        font-size: 21px;
-    }
-
-    .download--app__exclusive--image {
-        order: 1;
-        margin: 24px 0px;
-    }
-
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 2;
         font-size: 31px;
     }
 
-    .download--app__stories {
-        margin: 46px 50px;
+    .download-app__diagonal--grid {
+        width: 70%;
+    }
+
+    .download-app__exclusive {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1707px) {
+    .download-app__features--card--QR {
+        grid-column: span 1;
     }
 }
 
 /* Large desktops (1920px and above) */
 @media (min-width: 1920px) {
-    .download--app__content {
+    .download-app__content {
         margin: 64px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__stories {
+        margin-top: 64px;
+        width: 70%;
+    }
+
+    .download-app__features {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__content--title {
         font-size: 48px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 32px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 22px;
-        line-height: 1.5;
     }
-        
-    .download--app__diagonal {
+
+    .download-app__features--card--QR {
+        grid-column: span 1;
+    }
+
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 24px 450px;
-    }
-
-    .download--app__video__two {
+    .download-app__video--two {
         order: 1;
     }
 
-    .download--app__text {
+    .download-app__text {
         order: 2;
         width: 100%;
         align-items: flex-start;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
+    .download-app__text--title {
         font-size: 48px;
+    }
+
+    .download-app__text--description {
+        align-items: center;
+        font-size: 22px;
+    }
+
+    .download-app__stories--content--title {
+        font-size: 48px;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 22px;
+    }
+
+    .download-app__exclusive--image {
+        order: 1;
         margin-bottom: 24px;
     }
 
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 22px;
-    }
-
-    .download--app__stories__content--title {
-        font-size: 48px;
-    }
-
-    .download--app__stories__content--description {
-        font-size: 22px;
-    }
-
-    .download--app__exclusive--image {
-        order: 1;
-        margin: 24px 0px;
-    }
-
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 2;
         font-size: 32px;
     }
 
-    .download--app__stories {
-        margin: 36px 200px;
+    .download-app__diagonal--grid {
+        width: 70%;
+    }
+
+    .download-app__exclusive {
+        width: 70%;
     }
 }
 
 /* Ultra-wide desktops (2560px and above) */
 @media (min-width: 2560px) {
-    .download--app__content {
+    .download-app__content {
         margin: 64px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__stories {
+        margin-top: 64px;
+        width: 70%;
+    }
+
+    .download-app__features {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__content--title {
         font-size: 56px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 40px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 23px;
-        line-height: 1.5;
     }
-            
-    .download--app__diagonal {
+
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 60px 600px;
-    }
-
-    .download--app__video__two {
+    .download-app__video--two {
         order: 1;
     }
 
-    .download--app__text {
+    .download-app__features--card--QR {
+        grid-column: span 1;
+    }
+
+    .download-app__text {
         order: 2;
         width: 100%;
         align-items: flex-start;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
+    .download-app__text--title {
         font-size: 56px;
+    }
+
+    .download-app__text--description {
+        align-items: center;
+        font-size: 23px;
+    }
+
+    .download-app__stories--content--title {
+        font-size: 56px;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 23px;
+    }
+
+    .download-app__exclusive--image {
+        order: 1;
         margin-bottom: 24px;
     }
 
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 23px;
-    }
-
-    .download--app__stories__content--title {
-        font-size: 56px;
-    }
-
-    .download--app__stories__content--description {
-        font-size: 23px;
-    }
-
-    .download--app__exclusive--image {
-        order: 1;
-        margin: 24px 0px;
-    }
-
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 2;
         font-size: 40px;
     }
 
-    .download--app__stories {
-        margin: 60px 250px;
+    .download-app__diagonal--grid {
+        width: 70%;
+    }
+
+    .download-app__exclusive {
+        width: 70%;
     }
 }
 
 /* 4K screens (3840px and above) */
 @media (min-width: 3840px) {
-    .download--app__content {
+    .download-app__content {
         margin: 64px 0px;
     }
 
-    .download--app__content--title {
+    .download-app__content--grid {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__stories {
+        margin-top: 64px;
+        width: 70%;
+    }
+
+    .download-app__features {
+        margin: 64px 0px;
+        width: 70%;
+    }
+
+    .download-app__content--title {
         font-size: 72px;
     }
 
-    .download--app__content--subtitle {
+    .download-app__content--subtitle {
         font-size: 48px;
     }
 
-    .download--app__content--description {
+    .download-app__content--description {
         font-size: 24px;
-        line-height: 1.5;
     }
-               
-    .download--app__diagonal {
+
+    .download-app__diagonal {
         grid-gap: 0px;
     }
 
-    .download--app__content--grid {
-        margin: 60px 1000px;
+    .download-app__features--card--QR {
+        grid-column: span 1;
     }
 
-    .download--app__video__two {
+    .download-app__video--two {
         order: 1;
     }
 
-    .download--app__text {
+    .download-app__text {
         order: 2;
         width: 100%;
         align-items: flex-start;
     }
 
-    .download--app__text--title {
-        align-items: center;
-        width: 75%;
+    .download-app__text--title {
         font-size: 72px;
+    }
+
+    .download-app__text--description {
+        align-items: center;
+        font-size: 24px;
+    }
+
+    .download-app__stories--content--title {
+        font-size: 72px;
+    }
+
+    .download-app__stories--content--description {
+        font-size: 24px;
+    }
+
+    .download-app__exclusive--image {
+        order: 1;
         margin-bottom: 24px;
     }
 
-    .download--app__text--description {
-        align-items: center;
-        width: 75%;
-        font-size: 24px;
-    }
-
-    .download--app__stories__content--title {
-        font-size: 72px;
-    }
-
-    .download--app__stories__content--description {
-        font-size: 24px;
-    }
-
-    .download--app__exclusive--image {
-        order: 1;
-        margin: 24px 0px;
-    }
-
-    .download--app__exclusive--description {
+    .download-app__exclusive--description {
         order: 2;
         font-size: 48px;
     }
 
-    .download--app__stories {
-        margin: 60px 350px;
+    .download-app__diagonal--grid {
+        width: 70%;
+    }
+
+    .download-app__exclusive {
+        width: 70%;
     }
 }

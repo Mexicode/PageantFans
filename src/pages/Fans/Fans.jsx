@@ -1,59 +1,85 @@
-import './Fans.css';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import imgFansCollage from '../../assets/Images/IMG-FANS-COLLAGE.webp';
-import imgFansPhone from '../../assets/Images/FansPhone.webp';
-import imgModelsFans from '../../assets/Images/modelsFans.webp';
-import videoFansHome from '../../assets/Videos/fansHome.webm';
-import videoCrystalSparks from '../../assets/Videos/Crystal-sparks-wallpaper.webm';
+// JSX File: Fans.jsx
+import "./Fans.css";
+import React from "react";
+import LazyMedia from "../../components/LazyMedia";
+import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
+// ---- IMPORTS RESOURCES ---- //
+import ImgFansCollage from "../../assets/Images/IMG-FANS-COLLAGE.webp";
+import ImgFansPhone from "../../assets/Images/FansPhone.webp";
+import ImgModelsFans from "../../assets/Images/modelsFans.webp";
+
+import VideoFansHome from "../../assets/Videos/fansHome.webm";
+import VideoCrystalSparks from "../../assets/Videos/Crystal-sparks-wallpaper.webm";
 
 function Fans() {
-
+    const { t } = useTranslation();
     return (
         <section className="fans">
-            <video autoPlay loop muted playsInline preload="auto" src={videoFansHome} className="fans__video"></video>
-            <div className="fans--section">
-                <div className="fans--section__header">
-                    <h1 className="fans--section__header--tittle">FANS</h1>
-                    <p className="fans--section__header--content">
-                        Get exclusive content from the beauty queens you love the most. Join the elite
-                        inner circle of your favorite titleholders and gain elevated access not available elsewhere.
+            <LazyMedia src={VideoFansHome} className="fans__video" type="video" />
+            <div className="fans__section">
+                <div className="fans__section-header">
+                    <h1 className="fans__section-header--tittle">{t('FansSubs-Text1')}</h1>
+                    <p className="fans__section-header--content">
+                        {t('FansSubs-Text2')}
                     </p>
-                    <Link to="/joinus">
-                        <button className="fans--section__button">Subscribe</button>
+                    <Link to="/joinus/">
+                        <button className="button__global--red">{t('Subscribe')}</button>
                     </Link>
                 </div>
             </div>
-            <div className="fans--separator"></div>
-            <div className="fans--content">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="auto"
-                    src={videoCrystalSparks}
-                    className="fans--content__video">
-                </video>
-                <div className="fans--content__cards">
-                    <img src={imgFansCollage} alt="Fans collage"/>
-                    <div className="fans--content__cards--text">
-                    <h2 className="fans--content__cards--text--tittle">Get sneak peeks before anyone else</h2>
-                        <p className="fans--content__cards--text--content">Help your favorites choose their head shots, pageant wardrobe and more. All private. All behind the scenes. All access just for you.</p>
+            <div className="fans__separator"></div>
+            <div className="fans__content">
+                <LazyMedia src={VideoCrystalSparks} className="fans__content--video" type="video" />
+                <div className="fans__content-initial">
+                    <div className="fans__initial-image">
+                        <LazyMedia
+                            src={ImgFansCollage}
+                            className="fans__initial-image--collage"
+                            alt="Fans collage"
+                            type="image"
+                        />
+                    </div>
+                    <div className="fans__initial-content">
+                        <h2 className="fans__initial-content--tittle">{t('FansSubs-Text3')}</h2>
+                        <p className="fans__initial-content--paragraph">
+                            {t('FansSubs-Text4')}
+                        </p>
                     </div>
                 </div>
-                <div className="fans--content__cards">
-                    <div className="fans--content__cards--text--two">
-                        <h2 className="fans--content__cards--text--two--tittle">Have live chats and private discussions with your favorite queens</h2>
+                <div className="fans__content-movil">
+                    <div className="fans__movil-contain">
+                        <h2 className="fans__movil-contain--tittle">
+                            {t('FansSubs-Text5')}
+                        </h2>
                     </div>
-                    <img src={imgFansPhone} alt="Phone with fans" />
+                    <div className="image__movil-image">
+                        <LazyMedia
+                            src={ImgFansPhone}
+                            className="image__movil-image--phone"
+                            alt="Phone with fans"
+                            type="image"
+                        />
+                    </div>
                 </div>
-                <div className="fans--content__cards">
-                    <div className="fans--content__community">
-                        <h3 className="fans--content__community--tittle">COMMUNITY</h3>
-                        <h2 className="fans--content__community--sub-tittle">Make memories with your favorite queens. And share their journey to the crown, together.</h2>
-                        <p className="fans--content__community--content">Exclusive content, community and commerce with your favorite queens from around the world. Right here. Right now!</p>
-                        <img src={imgModelsFans} alt="Models fans" />
+                <div className="fans__content-community">
+                    <div className="fans__community-section">
+                        <h3 className="fans__section--tittle">{t('FansSubs-Text6')}</h3>
+                        <h2 className="fans__section--subtittle">
+                            {t('FansSubs-Text7')}
+                        </h2>
+                        <p className="fans__section--paragraph">
+                            {t('FansSubs-Text8')}
+                        </p>
+                    </div>
+                    <div className="fans__community-image">
+                        <LazyMedia
+                            src={ImgModelsFans}
+                            className="fans__community-image--collage"
+                            alt="Fans collage"
+                            type="image"
+                        />
                     </div>
                 </div>
             </div>

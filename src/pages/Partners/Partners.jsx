@@ -1,59 +1,96 @@
-import ReactPlayer from 'react-player';
-import './Partners.css';
-import { Link } from 'react-router-dom'
-import backgroundPartners from '../../assets/Videos/Partners.webm';
-import videoCrystalSparks from '../../assets/Videos/Crystal-sparks-wallpaper.webm';
-import imgPartners from '../../assets/Images/imagen-partners.webp';
-import imgLaptopPartners from '../../assets/Images/laptop.webp';
+// JSX File: Partners.jsx
+import "./Partners.css";
+import React from "react";
+import { Link } from "react-router-dom";
+import LazyMedia from "../../components/LazyMedia";
+import { useTranslation } from "react-i18next";
+
+// ---- IMPORTS RESOURCES ---- //
+import backgroundPartners from "../../assets/Videos/Partners.webm";
+import videoCrystalSparks from "../../assets/Videos/Crystal-sparks-wallpaper.webm";
+
+import imgPartners from "../../assets/Images/imagen-partners.webp";
+import imgLaptopPartners from "../../assets/Images/laptop.webp";
 
 function Partners() {
+    const { t } = useTranslation();
     return (
         <section className="partners">
-            <div className="partners__header">
-                <ReactPlayer playing={true} loop={true} muted playsinline preload='auto' url={backgroundPartners} height={800} width={'100%'} className='partners__background-video'></ReactPlayer>
-                <div className="partners--gradient"></div>
-                <div className="partners__container-text">
-                    <h1 className="container-text--title">PARTNERS</h1>
-                    <p className="container-text--paragraph">Pageant systems, designers, photographers, glam teams, coaches, trainers subscribe to PageantFans to create opportunity for or to connect with beauty queens and titleholders around the world.</p>
+            <div className="partners__banner">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    src={backgroundPartners}
+                    className="partners__banner--video"
+                ></video>
+                <div className="partners__banner--content">
+                    <div className="partners__banner--header">
+                        <h1 className="partners__banner--header-title">
+                            {t("Partners-Text1")}
+                        </h1>
+                        <p className="partners__banner--description-text">
+                            {t("Partners-Text2")}
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div className="partners__separator"></div>
-
             <div className="partners__body">
-                <ReactPlayer className="partners__body__video" playsinline playing={true} loop={true} muted preload='auto' url={videoCrystalSparks} height={0} ></ReactPlayer>
-                <div className="partner__rows">
-                    <div className="partner__row">
-                        <div className="row__container-image">
-                            <img className="container-image__image" src={imgPartners} alt="Partners Image" />
-                        </div>
-                        <div className="row_container-text">
-                            <h2 className="container-text__cards-title">Pageant Systems</h2>
-                            <p className="container-text__cards-text">PageantFans is fast becoming a powerful revenue generator for pageant systems of all sizes, everywhere. Find out what your potential earnings are and start working with us today!</p>
-                            <div className="container-text__container-button">
-                                <Link to='/joinus'>
-                                    <button className="button__global--red">Learn More</button>
+                <LazyMedia
+                    src={videoCrystalSparks}
+                    className="partners__body--video"
+                    type="video"
+                />
+                <div className="partners__body--rows">
+                    <div className="partners__body--row">
+                        <LazyMedia
+                            src={imgPartners}
+                            className="partners__row--container-image--image"
+                            alt="Partners Image"
+                            type="image"
+                        />
+                        <div className="partners__row--container-text">
+                            <h2 className="partners__row--container-text--cards-title">
+                                {t("Partners-Text3")}
+                            </h2>
+                            <p className="partners__row--container-text--cards-text">
+                                {t("Partners-Text4")}
+                            </p>
+                            <div className="partners__row--container-text--container-button">
+                                <Link to="/joinus/">
+                                    <button className="button__global--red">
+                                        {t("Learn More")}
+                                    </button>
                                 </Link>
                             </div>
                         </div>
                     </div>
-                    <div className="partner__row">
-                        <div className="row_container-text">
-                            <h2 className="container-text__cards-title">Investors</h2>
-                            <p className="container-text__cards-text">
-                                Founder-funded PageantFans is set to scale significantly, and is only
-                                now allowing accredited investors the opportunity to participate. If
-                                you're interested in investing in unicorns, let's talk.
+                    <div className="partners__body--row">
+                        <div className="partners__row--container-text">
+                            <h2 className="partners__row--container-text--cards-title">
+                                {t("Partners-Text5")}
+                            </h2>
+                            <p className="partners__row--container-text--cards-text">
+                                {t("Partners-Text6")}
                             </p>
-                            <div className="container-text__container-button">
-                                <Link to='/joinus'>
-                                    <button className="button__global--red">Inquire</button>
+                            <div className="partners__row--container-text--container-button">
+                                <Link to="/joinus/">
+                                    <button className="button__global--red">
+                                        {t("Inquire")}
+                                    </button>
                                 </Link>
                             </div>
                         </div>
-                        <div className="row__container-image">
-                            <img className="container-image__image" src={imgLaptopPartners} alt='' />
-                        </div>
+                        <LazyMedia
+                            src={imgLaptopPartners}
+                            className="partners__row--container-image--image"
+                            alt="Partners Image"
+                            type="image"
+                        />
                     </div>
                 </div>
             </div>
